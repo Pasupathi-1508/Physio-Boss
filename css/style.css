@@ -1,0 +1,69 @@
+/* css/style.css */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-dark: #0f3529;
+  --primary-accent: #267d62;
+  --mint-bg: #eef6f3;
+  --mint-border: #d5e8e1;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #334155;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Highlighted two-tone heading span */
+.text-accent {
+  color: var(--primary-accent);
+}
+
+/* Infinite Scrolling Gallery Marquee */
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 28s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Active Navigation Link */
+.nav-link.active {
+  color: var(--primary-accent);
+  font-weight: 700;
+}
+
+/* Smooth Body Map Hotspot Pulse */
+.hotspot-dot {
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.hotspot-dot.active {
+  fill: #ef4444;
+  r: 10;
+  filter: drop-shadow(0 0 8px rgba(239, 68, 68, 0.8));
+}
+
+/* View Transition Animation */
+.view-section {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
